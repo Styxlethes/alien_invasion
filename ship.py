@@ -31,14 +31,14 @@ class Ship():
         '''根据移动标志移动飞船'''
         if self.moving_right and self.rect.right < self.screen_rect.right:
             self.centerx += self.ai_settings.ship_speed_factor
-            
-        if self.moving_left and self.rect.left > 0:
+
+        elif self.moving_left and self.rect.left > 0:
             self.centerx -= self.ai_settings.ship_speed_factor
-            
-        if self.moving_up and self.rect.top > 0:
+
+        elif self.moving_up and self.rect.top > 0:
             self.centery -= self.ai_settings.ship_speed_factor
-            
-        if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
+
+        elif self.moving_down and self.rect.bottom < self.screen_rect.bottom:
             self.centery += self.ai_settings.ship_speed_factor
 
         # 根据self.center更新rect对象
